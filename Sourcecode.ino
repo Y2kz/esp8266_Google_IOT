@@ -2,12 +2,12 @@
 
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
-#define R1 D1
-#define R2 D2
-#define R3 D3
-#define R4 D5
-#define R5 D6
-#define R6 D4
+#define R1 5      // D1
+#define R2 4      // D2
+#define R3 3      // D3
+#define R4 2      // D5
+#define R5 14     // D6
+#define R6 12     // D4
 
 
 char auth[] = "iStW3X5UiMr3ffAeNwPO-OhmN_r7rASH"; // the auth code in blink
