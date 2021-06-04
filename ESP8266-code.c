@@ -1,7 +1,8 @@
-#define BLYNK_PRINT Serial
-
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
+
+#define BLYNK_PRINT Serial
+
 #define R1 5      // D1
 #define R2 4      // D2
 #define R3 3      // D3
@@ -11,6 +12,8 @@
 
 
 char auth[] = "iStW3X5UiMr3ffAeNwPO-OhmN_r7rASH"; // the auth code in blink
+
+//Wi-Fi 
 char ssid[] = "Y2kz"; // username or ssid of your WI-FI
 char pass[] = "Y2kz1234"; // password of your Wi-Fi
 
@@ -18,6 +21,7 @@ void setup()
 {
   // Debug console
   Serial.begin(115200);
+  
   pinMode(R1,OUTPUT); //extend these to D8 if you are using a 8 pin relay 
   pinMode(R2,OUTPUT);
   pinMode(R3,OUTPUT);
@@ -32,9 +36,6 @@ void setup()
   digitalWrite(R5,LOW);
   digitalWrite(R6,HIGH);
   
-  
-  
-
   Blynk.begin(auth, ssid, pass);
 }
 
